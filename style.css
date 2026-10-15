@@ -1,0 +1,24 @@
+:root{--bg1:#1c0605;--bg2:#000;--txt:#ffe6e1;--pink:#ff4b3e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 35%,var(--bg1),var(--bg2) 75%);color:var(--txt);font-family:'Quicksand',system-ui,sans-serif;overflow-x:hidden;display:flex;flex-direction:column;align-items:center}
+#rain{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.fh{position:absolute;bottom:-40px;opacity:0;animation:rise linear forwards}
+@keyframes rise{0%{opacity:0;transform:translateY(0) rotate(0)}15%{opacity:.7}100%{opacity:0;transform:translateY(-110vh) rotate(40deg)}}
+h1{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(30px,8vw,48px);margin:18px 12px 0;text-align:center;color:#fff;text-shadow:0 0 16px var(--pink);animation:fi 2s both}
+@keyframes fi{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+#wrap{width:min(98vw,calc(74vh*1.1),860px);margin-top:4px}
+svg{width:100%;height:auto;display:block;overflow:visible;animation:beat 1.7s ease-in-out infinite;transform-origin:50% 50%}
+@keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.035)}28%{transform:scale(1)}42%{transform:scale(1.025)}70%{transform:scale(1)}}
+.r{opacity:0;animation:ri .9s forwards,tw 3s ease-in-out infinite;font-weight:700}
+@keyframes ri{to{opacity:.9}}
+@keyframes tw{50%{fill:#ffb4a8}}
+#nm{font-family:'Great Vibes','Brush Script MT',cursive;fill:#fff;opacity:0;animation:fi 2s 2.8s forwards,gl 2.4s 5s ease-in-out infinite}
+@keyframes gl{50%{filter:drop-shadow(0 0 1.2px #fff) drop-shadow(0 0 3px #ff4d8d)}}
+#sm{opacity:0;animation:fi 1s 3.6s forwards}
+#tk{height:34px;margin-top:6px;font-size:22px;font-weight:700;text-align:center;color:#ffd1e3;text-shadow:0 0 12px var(--pink);transition:opacity .5s;min-width:1px}
+#bot{text-align:center;padding:10px 16px 34px;max-width:480px;opacity:0;animation:fi 1.5s 3.8s forwards}
+#bot p{margin:0 0 14px;font-size:17px;line-height:1.4}
+#btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#ff4d8d,#ff7a59);color:#fff;font:700 18px 'Quicksand',sans-serif;text-decoration:none;border-radius:999px;padding:15px 28px;box-shadow:0 8px 28px rgba(255,77,141,.55);animation:pl 1.8s infinite}
+#btn:active{transform:scale(.96)}
+@keyframes pl{0%{box-shadow:0 0 0 0 rgba(255,77,141,.7)}100%{box-shadow:0 0 0 22px rgba(255,77,141,0)}}
